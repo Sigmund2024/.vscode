@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "运行和调试",         
+            "type": "cppdbg",       　　 
+            "request": "launch",    　　 
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe", 
+            "args": [],             　　 
+            "stopAtEntry": false,       
+            "cwd": "${workspaceFolder}",
+            "environment": [],          
+            "externalConsole": false,   
+            "MIMode": "gdb",            
+            "setupCommands": [      　　 
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++.exe 生成活动文件",                 //（常用）运行和调试前要执行的task(编译)任务，任务名要和task.json里的"label"对应
+            "miDebuggerPath": "D:/Program Files/mingw64/bin/gdb.exe"      //debug调试工具的路径，使用gdb所在的路径
+        }
+    ]
+}
